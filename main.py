@@ -5,7 +5,7 @@ logging.basicConfig(format='%(asctime)s.%(msecs)03d [%(threadName)s] - %(message
 
 carpeta_imagenes = './imagenes'
 query = 'computadoras'
-api = PixabayAPI('PONER ACÁ EL API KEY', carpeta_imagenes)
+api = PixabayAPI('15310642-49c9591c978178eb12cf5413f', carpeta_imagenes)
 
 logging.info(f'Buscando imagenes de {query}')
 urls = api.buscar_imagenes(query, 5)
@@ -13,3 +13,5 @@ urls = api.buscar_imagenes(query, 5)
 for u in urls:
   logging.info(f'Descargando {u}')
   api.descargar_imagen(u)
+
+
